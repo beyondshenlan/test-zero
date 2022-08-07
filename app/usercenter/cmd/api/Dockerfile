@@ -1,5 +1,5 @@
 # 表示依赖 alpine 最新版
-FROM golang:alpine
+FROM my_alpine_go:v1
 ENV VERSION 1.0
 
 # 在容器根目录 创建一个 apps 目录
@@ -26,4 +26,4 @@ EXPOSE 8089
 
 # 运行golang程序的命令
 #ENTRYPOINT  ["/apps/test-zero"]
-CMD ["/apps/test-zero", "-f", "/apps/etc/usercenter.yaml"]
+CMD ["./test-zero", "-f", "etc/usercenter.yaml"]
