@@ -10,4 +10,4 @@ JwtAuth:
 
 RpcClientConf:
   Endpoints:
-    - 127.0.0.1:8080
+    - 172.18.17.173:8080
