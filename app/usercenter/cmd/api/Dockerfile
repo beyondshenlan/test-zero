@@ -9,7 +9,7 @@ WORKDIR /apps
 #VOLUME ["/apps/conf"]
 
 # 拷贝当前目录下 go_docker_demo1 可以执行文件
-COPY test-zero /apps/test-zero
+COPY test-zero /apps
 
 # 拷贝配置文件到容器中
 COPY etc/usercenter.yaml /apps/etc/usercenter.yaml
@@ -25,5 +25,5 @@ ENV LANG C.UTF-8
 EXPOSE 8089
 
 # 运行golang程序的命令
-ENTRYPOINT  ["/apps/test-zero"]
-#CMD ["/apps/test-zero", "-f", "/apps/etc/usercenter.yaml"]
+#ENTRYPOINT  ["/apps/test-zero"]
+CMD ["/apps/test-zero", "-f", "/apps/etc/usercenter.yaml"]
