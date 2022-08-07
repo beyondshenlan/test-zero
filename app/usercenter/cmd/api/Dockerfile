@@ -25,4 +25,4 @@ ENV LANG C.UTF-8
 EXPOSE 8089
 
 # 运行golang程序的命令
-CMD ["/apps/test-zero", "-f", "etc/usercenter.yaml"]
+CMD ["/apps/test-zero", "-f", "/apps/etc/usercenter.yaml"]
