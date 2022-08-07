@@ -1,5 +1,5 @@
 # 表示依赖 alpine 最新版
-FROM alpine:latest
+FROM golang:alpine
 ENV VERSION 1.0
 
 # 在容器根目录 创建一个 apps 目录
@@ -9,7 +9,7 @@ WORKDIR /apps
 #VOLUME ["/apps/conf"]
 
 # 拷贝当前目录下 go_docker_demo1 可以执行文件
-COPY test-zero /apps
+COPY test-zero /apps/
 
 # 拷贝配置文件到容器中
 COPY etc/usercenter.yaml /apps/etc/usercenter.yaml
